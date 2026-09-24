@@ -127,7 +127,7 @@
 			<dependency name="UIKit.framework" />
 		</section>
 
-		<define name="MACOSX_DEPLOYMENT_TARGET" value="10.9" if="mac" unless="MACOSX_DEPLOYMENT_TARGET" />
+		<define name="MACOSX_DEPLOYMENT_TARGET" value="14" />
 		<setenv name="MACOSX_DEPLOYMENT_TARGET" value="${MACOSX_DEPLOYMENT_TARGET}" if="mac" />
 
 		<section if="android">
