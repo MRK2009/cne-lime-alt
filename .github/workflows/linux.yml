@@ -50,6 +50,9 @@ jobs:
       - name: Rebuild Lime (x86_64)
         run: haxelib run lime rebuild linux -64 -nocolor -eval
 
+      - name: Rebuild Lime (x86)
+        run: haxelib run lime rebuild linux -32 -nocolor -eval
+
       - name: Rebuild Lime (Hashlink)
         run: haxelib run lime rebuild hl -nocolor
 
@@ -58,6 +61,13 @@ jobs:
         with:
           name: Linux64-NDLL
           path: ndll/Linux64
+          if-no-files-found: error
+
+      - name: Upload Artifact (ndll/Linux)
+        uses: actions/upload-artifact@v7.0.0
+        with:
+          name: Linux-NDLL
+          path: ndll/Linux
           if-no-files-found: error
 
       - name: Upload Artifact (templates/bin/hl/Linux64)
