@@ -14,7 +14,7 @@
 /* #define HAVE_PTHREAD_NP_H */
 
 /* Define if we have cpuid.h */
-#if defined(HX_LINUX) && !defined(RASPBERRYPI) && !defined(HXCPP_ARM64)
+#if defined(__i386__) || defined(__x86_64__)
 #define HAVE_CPUID_H
 #endif
 
@@ -25,7 +25,7 @@
 /* #define HAVE_GUIDDEF_H */
 
 /* Define if we have GCC's __get_cpuid() */
-#if defined(HX_LINUX) && !defined(RASPBERRYPI) && !defined(HXCPP_ARM64)
+#if defined(__i386__) || defined(__x86_64__)
 #define HAVE_GCC_GET_CPUID
 #endif
 
