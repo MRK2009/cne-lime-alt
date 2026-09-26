@@ -115,7 +115,7 @@ jobs:
           mkdir ./ndll
 
       - name: Rebuild Lime (ARM64)
-        run: haxelib run lime rebuild rpi -nocolor -eval
+        run: haxelib run lime rebuild linux -nocolor -eval
 
       - name: Upload Artifact (ndll/LinuxArm64)
         uses: actions/upload-artifact@v7.0.0
